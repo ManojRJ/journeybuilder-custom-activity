@@ -1,7 +1,7 @@
-const { v1: Uuidv1 } = require('uuid');
-const JWT = require('../utils/jwtDecoder');
-const SFClient = require('../utils/sfmc-client');
-const logger = require('../utils/logger');
+const { v1: Uuidv1 } = require("uuid");
+//const JWT = require('../utils/jwtDecoder');
+const SFClient = require("../utils/sfmc-client");
+const logger = require("../utils/logger");
 
 /**
  * The Journey Builder calls this method for each contact processed by the journey.
@@ -35,7 +35,7 @@ exports.execute = async (req, res) => {
   }
 
   res.status(200).send({
-    status: 'ok',
+    status: "ok",
   });
 };
 
@@ -47,7 +47,7 @@ exports.execute = async (req, res) => {
  */
 exports.save = async (req, res) => {
   res.status(200).send({
-    status: 'ok',
+    status: "ok",
   });
 };
 
@@ -58,7 +58,7 @@ exports.save = async (req, res) => {
  */
 exports.publish = (req, res) => {
   res.status(200).send({
-    status: 'ok',
+    status: "ok",
   });
 };
 
@@ -70,6 +70,6 @@ exports.publish = (req, res) => {
  */
 exports.validate = (req, res) => {
   res.status(200).send({
-    status: 'ok',
+    status: "ok",
   });
 };
