@@ -11,7 +11,7 @@ const logger = require("../utils/logger");
  */
 exports.execute = async (req, res) => {
   // decode data
-  console.log("activity js JWT input", req.body);
+  console.log("activity js JWT input", JWT);
   const data = JWT(req.body);
   console.log("activity js JWT output", data);
   logger.info(data);
