@@ -7,7 +7,9 @@ module.exports = (body) => {
   console.log("JWT body", body.toString());
   console.log("JWT body object", body);
   console.log("JWT variable", process.env.JWT);
-  return JWT.verify(body.toString(), process.env.JWT);
+  return JWT.verify(body.toString(), process.env.JWT, {
+    alg: "HS256",
+  });
 
   // return JWT.verify(body.toString("utf8"), process.env.JWT, {
   //   algorithm: "HS256",
